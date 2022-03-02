@@ -3,11 +3,9 @@ OKAY like a sidenote before all the code starts..
 this is a very long script just to make ui 
 cause i actually design ui outside of exploiting 
 so i guess you could call me "professional" but
-
 if you manage to deobfuscate all this congrats
 dont open this to skids cause you know we both hate them.
 thanks <3
-
 THIS WAS SO CANCEROUS TO DO BY HAND
 ]]
 
@@ -42,7 +40,8 @@ local rainbow = ColorSequence.new{ -- weee
 	ColorSequenceKeypoint.new(1, Color3.new(1, 0, 0))
 }
 
-ui.gui = Instance.new("ScreenGui")
+local gui = Instance.new("ScreenGui")
+ui.gui = gui
 
 local frame = Instance.new("Frame")
 local window = Instance.new("ScrollingFrame")
@@ -413,20 +412,17 @@ searchbar.Parent = menu
 menu_size.Parent = menu
 menu_sample.Parent = menu_frame
 
---[[-- settings
+--[[
+-- settings
 local menu = ui.create_panel()
 local menu_size = constraint:Clone()
-
 menu.Size = UDim2.new(0, 200, 0, 250)
 menu.Position = udim.half
-
 menu_size.MaxSize = Vector2.new(200, 9e9)
 menu_size.MinSize = Vector2.new(150, 50)
-
 menu["gradient"].Rotation = 22
-
 menu_size.Parent = menu
+menu.Parent = gui
+]]
 
-menu.Parent = gui]]
-
-return ui.gui
+return ui
