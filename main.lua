@@ -61,6 +61,14 @@ function ClearPerFrame(name)
 	game:GetService("RunService"):UnbindFromRenderStep(name)
 end
 
+function resetstates()
+	for i, v in pairs(Enum.HumanoidStateType.GetEnumItems(Enum.HumanoidStateType)) do -- tables bruhhh
+		humanoid:SetStateEnabled(v, true)
+	end
+	
+	humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+end
+
 function forcestate(state)
 	for i, v in pairs(Enum.HumanoidStateType.GetEnumItems(Enum.HumanoidStateType)) do -- tables bruhhh
 		humanoid:SetStateEnabled(v, false)
