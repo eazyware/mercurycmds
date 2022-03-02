@@ -429,4 +429,4 @@ menu_size.Parent = menu
 
 menu.Parent = gui]]
 
-return gui
+return ui
