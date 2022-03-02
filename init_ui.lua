@@ -42,7 +42,7 @@ local rainbow = ColorSequence.new{ -- weee
 	ColorSequenceKeypoint.new(1, Color3.new(1, 0, 0))
 }
 
-gui = Instance.new("ScreenGui")
+ui.gui = Instance.new("ScreenGui")
 
 local frame = Instance.new("Frame")
 local window = Instance.new("ScrollingFrame")
@@ -429,4 +429,4 @@ menu_size.Parent = menu
 
 menu.Parent = gui]]
 
-return ui
+return ui.gui
